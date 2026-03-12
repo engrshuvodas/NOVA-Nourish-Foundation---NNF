@@ -8,7 +8,31 @@ document.addEventListener('DOMContentLoaded', () => {
     initRevealAnimations();
     initImpactCounters();
     setActiveNavLink();
+    initMobileMenu();
 });
+
+// 0. Mobile Menu Toggle
+function initMobileMenu() {
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (menuBtn && navLinks) {
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    }
+}
 
 // 1. Language Logic (Smart Persistance)
 function initLanguage() {
