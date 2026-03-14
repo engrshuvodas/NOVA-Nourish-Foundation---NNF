@@ -1009,6 +1009,12 @@ body.lang-bn .impact-num {
     }
 
     .nav-cta {
+        margin-left: auto;
+        margin-right: 15px;
+        gap: 10px !important;
+    }
+
+    .nav-cta .btn-primary {
         display: none !important;
     }
 
@@ -1104,6 +1110,10 @@ body.lang-bn .impact-num {
 
 /* Extra Small Devices */
 @media (max-width: 480px) {
+    .logo-title {
+        display: none;
+    }
+
     .hero h1 {
         font-size: 2.2rem;
     }
