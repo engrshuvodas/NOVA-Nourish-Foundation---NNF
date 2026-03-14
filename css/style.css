@@ -1133,3 +1133,114 @@ body.lang-bn .impact-num {
         right: 25px;
     }
 }
+/* Theme Toggle & Dark Mode */
+.theme-toggle {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-fast);
+}
+
+.navbar.scrolled .theme-toggle {
+    background: rgba(15, 45, 31, 0.05);
+    color: var(--primary);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    background: rgba(255,255,255,0.2);
+}
+
+.navbar.scrolled .theme-toggle:hover {
+    background: rgba(15, 45, 31, 0.1);
+}
+
+[data-theme="dark"] {
+    --bg-cream: #121212;
+    --bg-white: #1e1e1e;
+    --glass: rgba(18, 18, 18, 0.85);
+    --text-main: #f0f0f0;
+    --text-muted: #a0a0a0;
+    --primary: #4ade80; 
+    --primary-light: #22c55e;
+    --shadow-md: 0 15px 45px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 30px 70px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .section-dark {
+    background: #0f2d1f; 
+    color: #f0f0f0;
+}
+
+[data-theme="dark"] .section-dark .eyebrow {
+    color: var(--accent-light);
+}
+
+[data-theme="dark"] .card, 
+[data-theme="dark"] .chart-box, 
+[data-theme="dark"] .faq-item,
+[data-theme="dark"] .vision-mission-item {
+    background: var(--bg-white);
+    border-color: rgba(255,255,255,0.05);
+}
+
+[data-theme="dark"] .impact-grid {
+    background: var(--bg-white);
+}
+
+[data-theme="dark"] .impact-card {
+    border-color: rgba(255,255,255,0.05);
+}
+
+[data-theme="dark"] .btn-primary {
+    background: var(--primary);
+    color: #121212;
+}
+
+[data-theme="dark"] .btn-primary:hover {
+    background: var(--primary-light);
+    color: #121212;
+}
+
+[data-theme="dark"] .btn-outline {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+[data-theme="dark"] .btn-outline:hover {
+    background: var(--primary);
+    color: #121212;
+}
+
+[data-theme="dark"] .navbar.scrolled .logo-title,
+[data-theme="dark"] .navbar.scrolled .nav-links a {
+    color: var(--primary);
+}
+
+[data-theme="dark"] .navbar:not(.scrolled) .nav-cta .btn-primary, 
+[data-theme="dark"] .section-dark .btn-primary {
+    background: var(--primary);
+    color: #121212;
+}
+
+[data-theme="dark"] .navbar:not(.scrolled) .nav-cta .btn-primary:hover {
+    background: var(--primary-light);
+}
+
+[data-theme="dark"] .footer {
+    background: #141414;
+}
+
+[data-theme="dark"] .team-avatar,
+[data-theme="dark"] .map-placeholder {
+    background: #2a2a2a;
+    border-color: #2a2a2a;
+}

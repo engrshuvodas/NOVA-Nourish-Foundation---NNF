@@ -145,3 +145,38 @@ if (subscribeForm) {
         }, 3000);
     };
 }
+
+
+// Theme Toggle Logic
+function initTheme() {
+    const savedTheme = localStorage.getItem('pnf_theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+    }
+    updateThemeIcon();
+}
+
+function toggleTheme() {
+    const root = document.documentElement;
+    const isDark = root.getAttribute('data-theme') === 'dark';
+    const newTheme = isDark ? 'light' : 'dark';
+    
+    root.setAttribute('data-theme', newTheme);
+    localStorage.setItem('pnf_theme', newTheme);
+    updateThemeIcon();
+}
+
+function updateThemeIcon() {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    const toggles = document.querySelectorAll('.theme-toggle');
+    toggles.forEach(btn => {
+        btn.innerHTML = isDark ? '☀️' : '🌙';
+    });
+}
+
+// Run init immediately to prevent flash
+initTheme();
