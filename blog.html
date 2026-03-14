@@ -13,20 +13,27 @@
 
 <body class="lang-en">
 
-    <!-- Navbar -->
+        <!-- Navbar -->
     <nav class="navbar scrolled">
         <div class="nav-container">
-            <a href="index.html" class="logo"><img src="data/logo/logo%20of%20pnf.jpeg" alt="PNF Logo"><span
-                    class="logo-title">PNF Foundation</span></a>
+            <a href="index.html" class="logo">
+                <img src="data/logo/logo%20of%20pnf.jpeg" alt="PNF Logo">
+                <span class="logo-title">PNF Foundation</span>
+            </a>
             <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="programs.html">Programs</a>
-                <a href="gallery.html">Gallery</a>
+                <a href="index.html" class="">Home</a>
+                <a href="about.html" class="">About</a>
+                <a href="programs.html" class="">Programs</a>
+                <a href="gallery.html" class="">Gallery</a>
                 <a href="blog.html" class="active">Blog</a>
+                <a href="volunteer.html" class="">Volunteer</a>
             </div>
-            <div class="nav-cta">
-                <a href="donate.html" class="btn btn-primary" style="padding: 12px 28px;">Donate Now</a>
+            <div class="nav-cta" style="display: flex; align-items: center; gap: 20px;">
+                <div class="lang-switcher">
+                    <span class="lang-btn active" onclick="switchLang('en')">EN</span>
+                    <span class="lang-btn" onclick="switchLang('bn')">বাং</span>
+                </div>
+                <a href="donate.html" class="btn btn-primary " style="padding: 12px 28px;">Donate Now</a>
             </div>
             <button class="mobile-menu-btn" aria-label="Toggle menu">
                 <span></span>
@@ -109,11 +116,46 @@
         </div>
     </section>
 
-    <!-- Footer -->
+        <!-- Footer -->
     <footer class="footer">
-        <div class="container" style="text-align: center; opacity: 0.6; font-size: 0.9rem;">
-            <p style="margin-bottom: 15px;"><a href="https://pnf-foundation.vercel.app" style="color: inherit; text-decoration: none;">🌐 Website</a></p>
-            &copy; 2025 Priti Nourishment Foundation.
+        <div class="container">
+            <div class="footer-main">
+                <div>
+                    <span class="footer-logo">PNF Foundation</span>
+                    <p style="opacity: 0.7; font-size: 0.95rem; margin-top: 15px;">Nourishing lives through youth-led innovation. Together for a healthier Bagerhat.</p>
+                </div>
+                <div>
+                    <h4>Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li>📍 Bagerhat, Bangladesh</li>
+                        <li>📞 +880 1927-704833</li>
+                        <li>📧 pnf.foundation@gmail.com</li>
+                        <li>🌐 <a href="https://pnf-foundation.vercel.app" style="color: inherit; text-decoration: none;">Website</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <form class="footer-newsletter" onsubmit="event.preventDefault(); alert('Subscribed!')">
+                        <h4>Stay Updated</h4>
+                        <div style="display: flex; gap: 10px; margin-top: 20px;">
+                            <input type="email" placeholder="Your email" style="flex: 1; padding: 12px 20px; border-radius: 50px; border: none; outline: none;" required>
+                            <button type="submit" class="btn btn-gold" style="padding: 10px 20px;">Join</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px; text-align: center; font-size: 0.85rem; opacity: 0.5; margin-top: 40px;">
+                &copy; 2025 Priti Nourishment Foundation. All Rights Reserved. Supported by GAIN & SUN Youth Network.
+            </div>
         </div>
     </footer>
 
