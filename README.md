@@ -1,133 +1,102 @@
+<div align="center">
+  <img src="data/logo/logo of pnf.jpeg" alt="PNF Logo" width="150" height="150" style="border-radius: 50%; border: 4px solid #2d8a5a;">
+  
+  # Priti Nourishment Foundation (PNF)
+  **Nourishing the Next Generation of Leaders.**
+  
+  [![Website](https://img.shields.io/badge/Website-Live-success?style=for-the-badge&logo=vercel)](https://pnf-foundation.vercel.app)
+  [![Language](https://img.shields.io/badge/Language-English%20%7C%20Bengali-blue?style=for-the-badge)](#)
+  [![Theme](https://img.shields.io/badge/Theme-Light%20%7C%20Dark-darkgray?style=for-the-badge)](#)
+</div>
 
-<h1>🌿 Priti Nourishment Foundation (PNF) — Data Repository</h1>
+---
 
-<blockquote>
-  <b>"Nourishing Lives. Empowering Communities."</b>
-</blockquote>
+## 🌟 Overview
+Born from the soil of Bagerhat, the **Priti Nourishment Foundation (PNF)** is a youth-powered engine driving nutritional sovereignty in rural Bangladesh. Established in 2025, PNF emerged as a response to the quiet crisis of malnutrition among the youth, proving that information, when packaged with dignity and innovation, has the power to transform lives.
 
-<p>
-  This repository is the central data hub for the <b>Priti Nourishment Foundation (PNF)</b> —
-  a youth-led organization working to improve nutrition, health awareness, and food security
-  for underprivileged communities in Bangladesh.
+---
+
+## 🎯 Our Mission & Vision
+* **Mission**: To empower communities through practical nutrition education and youth-led action.
+* **Vision**: To build a globally connected network of young leaders advancing nutrition awareness.
+
+---
+
+## ✨ Key Features
+* **🎨 Premium Aesthetic Design**: Custom-designed interface with rich typography, glassmorphic elements, smooth parallax effects, and micro-animations.
+* **🌓 Dual Theme (Dark/Light Mode)**: Seamless transition between light and dark themes using CSS variables, with user preference saved in `localStorage`.
+* **🌐 Bilingual Support (EN/BN)**: Instant live toggling between English and Bengali across all pages, forms, and placeholders using a smart JS implementation.
+* **📱 Fully Responsive**: Flawless experience across desktops, tablets, and smartphones using CSS Grid and Flexbox.
+* **🚀 High Performance**: Built entirely with Vanilla HTML/CSS/JS. Utilizes `IntersectionObserver` for efficient scroll animations and impact counting.
+
+---
+
+## 🚀 Impact Pillars & Programs
+Our six flagship programs are designed to break the cycle of malnutrition through education, leadership, and visual tools:
+
+1. **Innovation: Hanging Nutrition Bag** - Providing illustrated food menus to low-literacy families to ensure daily balanced meals without needing to read.
+2. **Education: Girl Health Awareness** - Specialized workshops for adolescent girls on menstrual hygiene and micronutrient importance.
+3. **Leadership: Youth Nutrition Advocates** - Training youth to lead health campaigns in their villages, turning students into teachers.
+4. **Workshops: Family Nutrition Training** - Teaching parents how to utilize local, low-cost ingredients to create maximum nutritional value.
+5. **Campaign: Local Superfoods Drive** - Promoting the consumption of native, seasonal vegetables and fruits that are affordable and nutritious.
+6. **Data: Community Health Research** - Systematically collecting nutritional data from rural households to inform better policy and intervention.
+
+---
+
+## 📂 Project Structure & Pages
+
+| Page | Description |
+| ---- | ----------- |
+| `index.html` | **Home** - Overview, impact dashboard, hero section, and quick links. |
+| `about.html` | **About Us** - Foundation history, vision/mission, detailed timeline, and core leadership team. |
+| `programs.html` | **Programs** - In-depth look at our 6 strategic impact pillars and initiatives. |
+| `gallery.html` | **Gallery** - Visual stories, field campaign photos, and community testimonials. |
+| `blog.html` | **Blog** - Nutrition tips, impact news, feature articles, and newsletter signup. |
+| `volunteer.html` | **Volunteer** - Dynamic application form with dynamic placeholders, FAQs, and role descriptions. |
+| `donate.html` | **Donate** - Transparent contribution pathways, impact breakdowns, and WhatsApp integration for receipts. |
+
+---
+
+## 🛠️ Technology Stack
+This project is built to be lighting-fast, completely abandoning heavy frameworks for raw performance and custom aesthetics.
+* **Frontend Structure**: HTML5 (Semantic and Accessible)
+* **Styling**: Vanilla CSS3 (Custom Properties, Grid, Flexbox, Media Queries for Responsive Design)
+* **Interactivity**: Vanilla JavaScript (ES6+, Intersection Observer API, LocalStorage for state persistence)
+* **Typography**: Google Fonts (Cormorant Garamond, Plus Jakarta Sans, Hind Siliguri for perfect English & Bengali harmony)
+
+---
+
+## 👥 Core Leadership Team
+* **Priti Das Dipa** - Founder & Executive Director
+* **Md. Hasan** - Programs Manager
+* **Sadia Islam** - Health Education Lead
+
+---
+
+## ⚙️ Local Setup
+To run this project locally, simply clone the repository and open the `index.html` file in any modern web browser.
+
+```bash
+# Clone the repository
+git clone https://github.com/engrshuvodas/Priti-Nourishment-Foundation---PNF.git
+
+# Navigate to the project directory
+cd Priti-Nourishment-Foundation---PNF
+
+# Open the site
+start index.html  # On Windows
+open index.html   # On macOS
+```
+
+---
+
+## 🤝 Support & Contact
+* **Location**: Bagerhat, Bangladesh
+* **Phone / WhatsApp**: +880 1927-704833
+* **Email**: pnf.foundation@gmail.com
+* **Website**: [https://pnf-foundation.vercel.app](https://pnf-foundation.vercel.app)
+
+---
+<p align="center">
+  <i>"Nourishing lives through youth-led innovation. Together for a healthier Bagerhat."</i>
 </p>
-
-<hr/>
-
-<h2>📌 About PNF</h2>
-
-<p>
-  PNF was born from the <b>Hanging Nutrition Bag Project</b>, supported by
-  <b>GAIN</b> and <b>SUN Youth Network Bangladesh</b>. The project provided
-  eco-friendly hanging bags with illustrated daily food menus to 25 low-income families —
-  designed so even illiterate households could follow healthy meal planning.
-</p>
-
-<blockquote>
-  We believe nutrition is not only about food, but also <b>dignity</b>, <b>awareness</b>, and <b>sustainable care</b>.
-</blockquote>
-
-<table>
-  <tr><td>📍 <b>Location</b></td><td>Bagerhat, Bangladesh</td></tr>
-  <tr><td>📞 <b>Phone</b></td><td>+880 1701396760</td></tr>
-  <tr><td>📧 <b>Email</b></td><td>pnf.foundation@gmail.com</td></tr>
-</table>
-
-<hr/>
-
-<h2>🎯 Mission &amp; Vision</h2>
-
-<table border="1" cellpadding="8" cellspacing="0">
-  <tr>
-    <th>🏹 Mission</th>
-    <td>To improve nutrition and health outcomes for underprivileged communities through education, awareness, and sustainable community-based programs.</td>
-  </tr>
-  <tr>
-    <th>🌍 Vision</th>
-    <td>A world where every individual, regardless of background, has access to nutritious food, health knowledge, and a dignified life.</td>
-  </tr>
-</table>
-
-<hr/>
-
-<h2>🔍 Focus Areas</h2>
-
-<table border="1" cellpadding="8" cellspacing="0">
-  <tr>
-    <th>Area</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>🥗 <b>Nutrition Education</b></td>
-    <td>Practical, culturally appropriate tools for balanced meals, food hygiene, and affordable healthy cooking.</td>
-  </tr>
-  <tr>
-    <td>👩 <b>Adolescent Health</b></td>
-    <td>Awareness sessions on nutrition, hygiene, and healthy habits for adolescent girls and youth.</td>
-  </tr>
-  <tr>
-    <td>🏘️ <b>Community Training</b></td>
-    <td>Hands-on training for families, caregivers, and local youth on nutrition and healthy practices.</td>
-  </tr>
-  <tr>
-    <td>🌟 <b>Youth Leadership</b></td>
-    <td>Empowering young people as nutrition and health advocates within their communities.</td>
-  </tr>
-  <tr>
-    <td>🥦 <b>Healthy Food, Healthy Life</b></td>
-    <td>Campaigns promoting affordable, nutritious eating habits for long-term well-being.</td>
-  </tr>
-</table>
-
-<hr/>
-
-<h2>🗂️ Repository Structure</h2>
-
-<pre>
-pnf-data/
-├── programs/
-│   ├── nutrition-education/
-│   ├── adolescent-health/
-│   ├── community-training/
-│   └── youth-leadership/
-├── campaigns/
-├── beneficiaries/
-├── reports/
-├── resources/
-└── media/
-</pre>
-
-<hr/>
-
-<h2>🚀 Purpose of This Repository</h2>
-
-<ul>
-  <li>📊 Store and organize all program data, reports, and field records</li>
-  <li>📁 Keep a structured archive of beneficiary information (anonymized)</li>
-  <li>📋 Track campaign progress and outcomes over time</li>
-  <li>🤝 Facilitate collaboration with partners like GAIN and SUN Youth Network</li>
-  <li>🗃️ Serve as a reference for future funding proposals and impact reporting</li>
-</ul>
-
-<hr/>
-
-<h2>🤝 Get Involved</h2>
-
-<p>We welcome volunteers, organizations, and partners who share our commitment to nutrition and health equity.</p>
-
-<ul>
-  <li>✋ <b>Volunteer</b> with our community programs</li>
-  <li>🤝 <b>Partner</b> with us on campaigns and training</li>
-  <li>💚 <b>Support</b> our mission through resources or funding</li>
-</ul>
-
-<p>📬 Contact: <b>pnf.foundation@gmail.com</b></p>
-
-<hr/>
-
-<h2>📄 License</h2>
-
-<p>
-  All data in this repository is for internal use by Priti Nourishment Foundation.
-  Sensitive beneficiary data must remain anonymized and handled per ethical data protection standards.
-</p>
-
