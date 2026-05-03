@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | NOVA Nourish Foundation</title>
+    <title>Nutrition Tips & Blog | NOVA Nourish Foundation</title>
+    <meta name="description" content="Evidence-based nutrition tips, health guides, and impact stories from NOVA Nourish Foundation — empowering communities in Bagerhat, Bangladesh.">
+    <meta name="keywords" content="nutrition tips Bangladesh, health blog NNF, nutrition for boys, nutrition for girls, mental health, family nutrition, NOVA Nourish Foundation">
+    <meta property="og:title" content="Nutrition Tips & Blog | NOVA Nourish Foundation">
+    <meta property="og:description" content="Evidence-based nutrition tips and health guides from NNF — empowering Bagerhat communities.">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="css/style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;600;800&family=Hind+Siliguri:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;600;800&family=Hind+Siliguri:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .blog-card-link { text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%; }
+        .card.blog-card { cursor: pointer; }
+        .read-more-btn { font-weight: 800; color: var(--secondary); text-decoration: none; display: inline-flex; align-items: center; gap: 4px; transition: gap 0.3s; margin-top: auto; padding-top: 15px; }
+        .card:hover .read-more-btn { gap: 10px; }
+        .tip-badge { display: inline-block; background: var(--secondary); color: white; font-size: 0.7rem; font-weight: 800; padding: 4px 10px; border-radius: 20px; margin-bottom: 12px; letter-spacing: 0.05em; text-transform: uppercase; }
+        [data-theme="dark"] .tip-badge { background: #52e084; color: #0a0a0a; }
+        .card-body p { flex-grow: 1; }
+        @media (max-width: 767px) {
+            .filter-container { flex-wrap: wrap; }
+        }
+    </style>
 </head>
-
 <body class="lang-en">
 
-        <!-- Navbar -->
+    <!-- Navbar -->
     <nav class="navbar scrolled">
         <div class="nav-container">
             <a href="index.html" class="logo">
@@ -21,160 +34,215 @@
                 <span class="logo-title">NNF Foundation</span>
             </a>
             <div class="nav-links">
-                <a href="index.html" class=""><span class="en-content">Home</span><span class="bn-content">হোম</span></a>
-                <a href="about.html" class=""><span class="en-content">About</span><span class="bn-content">সম্পর্কে</span></a>
-                <a href="programs.html" class=""><span class="en-content">Programs</span><span class="bn-content">কার্যক্রম</span></a>
-                <a href="gallery.html" class=""><span class="en-content">Gallery</span><span class="bn-content">গ্যালারী</span></a>
+                <a href="index.html"><span class="en-content">Home</span><span class="bn-content">হোম</span></a>
+                <a href="about.html"><span class="en-content">About</span><span class="bn-content">সম্পর্কে</span></a>
+                <a href="programs.html"><span class="en-content">Programs</span><span class="bn-content">কার্যক্রম</span></a>
+                <a href="gallery.html"><span class="en-content">Gallery</span><span class="bn-content">গ্যালারী</span></a>
                 <a href="blog.html" class="active"><span class="en-content">Blog</span><span class="bn-content">ব্লগ</span></a>
-                <a href="volunteer.html" class=""><span class="en-content">Volunteer</span><span class="bn-content">স্বেচ্ছাসেবক</span></a>
+                <a href="volunteer.html"><span class="en-content">Volunteer</span><span class="bn-content">স্বেচ্ছাসেবক</span></a>
             </div>
-            <div class="nav-cta" style="display: flex; align-items: center; gap: 20px;">
-                                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">🌙</button>
+            <div class="nav-cta" style="display:flex;align-items:center;gap:20px;">
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">🌙</button>
                 <div class="lang-switcher">
                     <span class="lang-btn active" onclick="switchLang('en')">EN</span>
                     <span class="lang-btn" onclick="switchLang('bn')">বাং</span>
                 </div>
-                <a href="donate.html" class="btn btn-primary " style="padding: 12px 28px;"><span class="en-content">Donate Now</span><span class="bn-content">দান করুন</span></a>
+                <a href="donate.html" class="btn btn-primary" style="padding:12px 28px;"><span class="en-content">Donate Now</span><span class="bn-content">দান করুন</span></a>
             </div>
-            <button class="mobile-menu-btn" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <button class="mobile-menu-btn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
         </div>
     </nav>
 
     <!-- Header -->
-    <section class="section" style="padding-top: 180px; text-align: center;">
+    <section class="section" style="padding-top:180px;text-align:center;">
         <div class="container reveal">
-            <span class="eyebrow"><span class="en-content">Perspectives</span><span class="bn-content">দৃষ্টিকোণ</span></span>
-            <h1 style="font-size: clamp(3rem, 6vw, 4.5rem);">Knowledge is <span class="serif-italic">Nourishment</span>.
-            </h1>
-            <p style="margin: 20px auto; opacity: 0.8; max-width: 600px;">
-                <span class="en-content">Updates from the field, nutritional guides, and stories of the youth leaders reshaping Bagerhat.</span>
-                <span class="bn-content">মাঠের কাজ, পুষ্টি নির্দেশিকা এবং বাগেরহাটকে নতুন রূপ দেওয়া তরুণ নেতাদের বিভিন্ন গল্প।</span>
+            <span class="eyebrow"><span class="en-content">Nutrition Tips & Stories</span><span class="bn-content">পুষ্টি টিপস ও গল্প</span></span>
+            <h1 style="font-size:clamp(3rem,6vw,4.5rem);">Knowledge is <span class="serif-italic">Nourishment</span>.</h1>
+            <p style="margin:20px auto;opacity:0.8;max-width:600px;">
+                <span class="en-content">Evidence-based nutrition guides, health tips, and stories of the youth leaders reshaping Bagerhat.</span>
+                <span class="bn-content">প্রমাণ-ভিত্তিক পুষ্টি নির্দেশিকা, স্বাস্থ্য টিপস এবং বাগেরহাটকে নতুন রূপ দেওয়া তরুণ নেতাদের গল্প।</span>
             </p>
         </div>
     </section>
 
-    <!-- Blog Selection -->
-    <section class="section" style="padding-top: 0;">
+    <!-- Blog Cards -->
+    <section class="section" style="padding-top:0;">
         <div class="container">
             <div class="filter-container reveal">
-                <button class="filter-btn active" onclick="switchBlog('all', this)"><span class="en-content">All Stories</span><span class="bn-content">সব গল্প</span></button>
-                <button class="filter-btn" onclick="switchBlog('nutrition', this)"><span class="en-content">Nutrition Tips</span><span class="bn-content">পুষ্টির টিপস</span></button>
-                <button class="filter-btn" onclick="switchBlog('impact', this)"><span class="en-content">Impact News</span><span class="bn-content">ইমপ্যাক্ট নিউজ</span></button>
+                <button class="filter-btn active" id="filter-all" onclick="switchBlog('all',this)"><span class="en-content">All Topics</span><span class="bn-content">সব বিষয়</span></button>
+                <button class="filter-btn" id="filter-boys" onclick="switchBlog('boys',this)"><span class="en-content">For Boys</span><span class="bn-content">ছেলেদের জন্য</span></button>
+                <button class="filter-btn" id="filter-girls" onclick="switchBlog('girls',this)"><span class="en-content">For Girls</span><span class="bn-content">মেয়েদের জন্য</span></button>
+                <button class="filter-btn" id="filter-family" onclick="switchBlog('family',this)"><span class="en-content">Family Health</span><span class="bn-content">পারিবারিক স্বাস্থ্য</span></button>
+                <button class="filter-btn" id="filter-leadership" onclick="switchBlog('leadership',this)"><span class="en-content">Leadership</span><span class="bn-content">নেতৃত্ব</span></button>
             </div>
 
-            <div class="grid-3 reveal">
-                <div class="card blog-card" data-cat="nutrition">
-                    <div class="card-img-wrap"><img src="img/blog/1.jpg" alt="Blog"></div>
-                    <div class="card-body">
-                        <span class="eyebrow"><span class="en-content">Feature</span><span class="bn-content">ফিচার</span></span>
-                        <h3><span class="en-content">Community Health Kickoff</span><span class="bn-content">কমিউনিটি স্বাস্থ্য শুরু</span></h3>
-                        <p><span class="en-content">The launch of our latest health awareness campaign across Bagerhat villages.</span><span class="bn-content">বাগেরহাটের গ্রামজুড়ে আমাদের সর্বশেষ স্বাস্থ্য সচেতনতা ক্যাম্পেইন চালু করা হয়েছে।</span></p>
-                        <a href="#" style="font-weight: 800; color: var(--secondary); text-decoration: none;">
-                            <span class="en-content">Read Article &rarr;</span>
-                            <span class="bn-content">পড়ুন &rarr;</span>
-                        </a>
-                    </div>
+            <div class="grid-3 reveal" id="blog-grid">
+
+                <!-- Card 1 -->
+                <div class="card blog-card" data-cat="boys">
+                    <a href="articles/nutrition-for-boys.html" class="blog-card-link">
+                        <div class="card-img-wrap">
+                            <img src="img/tips/1.png" alt="Nutrition for Boys – Strong Today Healthy Tomorrow" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <span class="tip-badge">Boys · Nutrition</span>
+                            <h3><span class="en-content">Strong Today, Healthy Tomorrow</span><span class="bn-content">আজ শক্তিশালী, আগামীকাল সুস্থ</span></h3>
+                            <p><span class="en-content">Key nutrients, the healthy plate model, and daily habits every boy needs for strength, focus, and immunity.</span><span class="bn-content">ছেলেদের শক্তি, মনোযোগ ও রোগ প্রতিরোধ ক্ষমতার জন্য প্রয়োজনীয় পুষ্টি ও স্বাস্থ্যকর অভ্যাস।</span></p>
+                            <span class="read-more-btn"><span class="en-content">Read Article →</span><span class="bn-content">পড়ুন →</span></span>
+                        </div>
+                    </a>
                 </div>
-                <div class="card blog-card" data-cat="impact">
-                    <div class="card-img-wrap"><img src="img/blog/2.jpg" alt="Blog"></div>
-                    <div class="card-body">
-                        <span class="eyebrow"><span class="en-content">Update</span><span class="bn-content">আপডেট</span></span>
-                        <h3><span class="en-content">Monitoring Our Impact</span><span class="bn-content">প্রভাব ট্র্যাকিং</span></h3>
-                        <p><span class="en-content">Regular health checkups ensure we track the wellbeing of families in our program.</span><span class="bn-content">নিয়মিত স্বাস্থ্য পরীক্ষা নিশ্চিত করে যে আমরা আমাদের প্রোগ্রামের পরিবারগুলির সুস্থতা ট্র্যাক করছি।</span></p>
-                        <a href="#" style="font-weight: 800; color: var(--secondary); text-decoration: none;">
-                            <span class="en-content">Read Article &rarr;</span>
-                            <span class="bn-content">পড়ুন &rarr;</span>
-                        </a>
-                    </div>
+
+                <!-- Card 2 -->
+                <div class="card blog-card" data-cat="boys">
+                    <a href="articles/nutrition-for-boys-advanced.html" class="blog-card-link">
+                        <div class="card-img-wrap">
+                            <img src="img/tips/2.png" alt="Best Foods and Daily Habits for Boys" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <span class="tip-badge">Boys · Advanced</span>
+                            <h3><span class="en-content">Best Foods & Habits for Boys</span><span class="bn-content">ছেলেদের সেরা খাবার ও অভ্যাস</span></h3>
+                            <p><span class="en-content">The best everyday foods, sports nutrition, warning signs, and practical daily habits for growing boys.</span><span class="bn-content">বেড়ে ওঠা ছেলেদের জন্য সেরা খাবার, খেলাধুলার পুষ্টি এবং দৈনন্দিন অভ্যাস।</span></p>
+                            <span class="read-more-btn"><span class="en-content">Read Article →</span><span class="bn-content">পড়ুন →</span></span>
+                        </div>
+                    </a>
                 </div>
-                <div class="card blog-card" data-cat="nutrition">
-                    <div class="card-img-wrap"><img src="img/blog/3.jpg" alt="Blog"></div>
-                    <div class="card-body">
-                        <span class="eyebrow"><span class="en-content">Health</span><span class="bn-content">স্বাস্থ্য</span></span>
-                        <h3><span class="en-content">Nutrition Bag Distribution Drive</span><span class="bn-content">পুষ্টি ব্যাগ বিতরণ</span></h3>
-                        <p><span class="en-content">Taking our flagship tool directly to the families who need it most.</span><span class="bn-content">আমাদের ফ্ল্যাগশিপ টুলটি সরাসরি সেই পরিবারগুলিতে নিয়ে যাচ্ছি যারা সবচেয়ে বেশি প্রয়োজন।</span></p>
-                        <a href="#" style="font-weight: 800; color: var(--secondary); text-decoration: none;">
-                            <span class="en-content">Read Article &rarr;</span>
-                            <span class="bn-content">পড়ুন &rarr;</span>
-                        </a>
-                    </div>
+
+                <!-- Card 3 -->
+                <div class="card blog-card" data-cat="family">
+                    <a href="articles/nutrition-for-adults.html" class="blog-card-link">
+                        <div class="card-img-wrap">
+                            <img src="img/tips/3.png" alt="Nutrition for Healthy Adults" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <span class="tip-badge">Adults · Balance</span>
+                            <h3><span class="en-content">Nutrition for Healthy Adults</span><span class="bn-content">সুস্থ প্রাপ্তবয়স্কদের জন্য পুষ্টি</span></h3>
+                            <p><span class="en-content">The complete adult nutrition guide: healthy plate model, essential nutrients, portion control, and lifestyle habits.</span><span class="bn-content">প্রাপ্তবয়স্কদের পুষ্টির সম্পূর্ণ গাইড — সঠিক খাবার, পরিমাণ এবং স্বাস্থ্যকর জীবনযাপন।</span></p>
+                            <span class="read-more-btn"><span class="en-content">Read Article →</span><span class="bn-content">পড়ুন →</span></span>
+                        </div>
+                    </a>
                 </div>
-                <div class="card blog-card" data-cat="impact">
-                    <div class="card-img-wrap"><img src="img/blog/4.jpg" alt="Blog"></div>
-                    <div class="card-body">
-                        <span class="eyebrow"><span class="en-content">Workshop</span><span class="bn-content">কর্মশালা</span></span>
-                        <h3><span class="en-content">Adolescent Health Awareness</span><span class="bn-content">কিশোরী স্বাস্থ্য সচেতনতা</span></h3>
-                        <p><span class="en-content">Training young girls on hygiene, nutrition, and health practices for life.</span><span class="bn-content">তরুণ মেয়েদের জীবনব্যাপী স্বাস্থ্য, পরিচ্ছন্নতা এবং পুষ্টি অনুশীলনে প্রশিক্ষণ।</span></p>
-                        <a href="#" style="font-weight: 800; color: var(--secondary); text-decoration: none;">
-                            <span class="en-content">Read Article &rarr;</span>
-                            <span class="bn-content">পড়ুন &rarr;</span>
-                        </a>
-                    </div>
+
+                <!-- Card 4 -->
+                <div class="card blog-card" data-cat="girls">
+                    <a href="articles/nutrition-for-girls.html" class="blog-card-link">
+                        <div class="card-img-wrap">
+                            <img src="img/tips/4.png" alt="Nutrition for Adult Girls" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <span class="tip-badge">Girls · Women</span>
+                            <h3><span class="en-content">Nutrition for Adult Girls</span><span class="bn-content">প্রাপ্তবয়স্ক মেয়েদের পুষ্টি</span></h3>
+                            <p><span class="en-content">Iron, calcium, vitamin B12, menstrual health, skin care — the complete nutrition guide for girls and women.</span><span class="bn-content">আয়রন, ক্যালসিয়াম, ভিটামিন B12 এবং বিশেষ যত্ন সহ মেয়েদের সম্পূর্ণ পুষ্টি গাইড।</span></p>
+                            <span class="read-more-btn"><span class="en-content">Read Article →</span><span class="bn-content">পড়ুন →</span></span>
+                        </div>
+                    </a>
                 </div>
-                <div class="card blog-card" data-cat="nutrition">
-                    <div class="card-img-wrap"><img src="img/blog/5.jpg" alt="Blog"></div>
-                    <div class="card-body">
-                        <span class="eyebrow"><span class="en-content">Leadership</span><span class="bn-content">নেতৃত্ব</span></span>
-                        <h3><span class="en-content">Youth Leaders in Action</span><span class="bn-content">তরুণ নেতারা কাজে</span></h3>
-                        <p><span class="en-content">Our young advocates organizing community health meetings in their own villages.</span><span class="bn-content">আমাদের তরুণ প্রতিনিধিরা তাদের নিজস্ব গ্রামে কমিউনিটি স্বাস্থ্য মিটিং আয়োজন করছে।</span></p>
-                        <a href="#" style="font-weight: 800; color: var(--secondary); text-decoration: none;">
-                            <span class="en-content">Read Article &rarr;</span>
-                            <span class="bn-content">পড়ুন &rarr;</span>
-                        </a>
-                    </div>
+
+                <!-- Card 5 -->
+                <div class="card blog-card" data-cat="girls">
+                    <a href="articles/nutrition-for-girls.html#special-care" class="blog-card-link">
+                        <div class="card-img-wrap">
+                            <img src="img/tips/5.png" alt="Special Care Nutrition for Girls" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <span class="tip-badge">Girls · Special Care</span>
+                            <h3><span class="en-content">Eat Right, Feel Right, Shine</span><span class="bn-content">সঠিক খাও, ভালো অনুভব করো</span></h3>
+                            <p><span class="en-content">Daily habits, sample meal plans, and healthy limits that help adult girls stay energetic, confident, and strong.</span><span class="bn-content">দৈনন্দিন অভ্যাস ও খাদ্যতালিকা যা মেয়েদের সুস্থ, আত্মবিশ্বাসী ও শক্তিশালী রাখে।</span></p>
+                            <span class="read-more-btn"><span class="en-content">Read Article →</span><span class="bn-content">পড়ুন →</span></span>
+                        </div>
+                    </a>
                 </div>
-                <div class="card blog-card" data-cat="impact">
-                    <div class="card-img-wrap"><img src="img/blog/6.jpg" alt="Blog"></div>
-                    <div class="card-body">
-                        <span class="eyebrow"><span class="en-content">Consultation</span><span class="bn-content">পরামর্শ</span></span>
-                        <h3><span class="en-content">Family Nutrition Counseling</span><span class="bn-content">পারিবারিক পুষ্টি পরামর্শ</span></h3>
-                        <p><span class="en-content">One-on-one sessions with families to create personalized nutrition plans.</span><span class="bn-content">ব্যক্তিগত পুষ্টি পরিকল্পনা তৈরি করতে পরিবারের সাথে একের পর এক সেশন।</span></p>
-                        <a href="#" style="font-weight: 800; color: var(--secondary); text-decoration: none;">
-                            <span class="en-content">Read Article &rarr;</span>
-                            <span class="bn-content">পড়ুন &rarr;</span>
-                        </a>
-                    </div>
+
+                <!-- Card 6 -->
+                <div class="card blog-card" data-cat="family">
+                    <a href="articles/good-food-good-health.html" class="blog-card-link">
+                        <div class="card-img-wrap">
+                            <img src="img/tips/6.png" alt="Good Food Good Health" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <span class="tip-badge">Family · Basics</span>
+                            <h3><span class="en-content">Good Food, Good Health</span><span class="bn-content">ভালো খাবার, ভালো স্বাস্থ্য</span></h3>
+                            <p><span class="en-content">Simple, practical nutrition rules every family can follow: the six food groups, daily habits, and clean living.</span><span class="bn-content">প্রতিটি পরিবার অনুসরণ করতে পারে এমন সহজ পুষ্টির নিয়ম — ছয়টি খাদ্য গ্রুপ ও দৈনন্দিন অভ্যাস।</span></p>
+                            <span class="read-more-btn"><span class="en-content">Read Article →</span><span class="bn-content">পড়ুন →</span></span>
+                        </div>
+                    </a>
                 </div>
-                <div class="card blog-card" data-cat="nutrition">
-                    <div class="card-img-wrap"><img src="img/blog/7.jpg" alt="Blog"></div>
-                    <div class="card-body">
-                        <span class="eyebrow"><span class="en-content">Education</span><span class="bn-content">শিক্ষা</span></span>
-                        <h3><span class="en-content">Local Superfoods Campaign</span><span class="bn-content">স্থানীয় সুপারফুড ক্যাম্পেইন</span></h3>
-                        <p><span class="en-content">Promoting affordable, nutritious foods grown right here in Bangladesh.</span><span class="bn-content">বাংলাদেশে চাষ করা সাশ্রয়ী, পুষ্টিকর খাবার প্রচার করা।</span></p>
-                        <a href="#" style="font-weight: 800; color: var(--secondary); text-decoration: none;">
-                            <span class="en-content">Read Article &rarr;</span>
-                            <span class="bn-content">পড়ুন &rarr;</span>
-                        </a>
-                    </div>
+
+                <!-- Card 7 -->
+                <div class="card blog-card" data-cat="family">
+                    <a href="articles/good-food-good-health.html#eat-more" class="blog-card-link">
+                        <div class="card-img-wrap">
+                            <img src="img/tips/7.png" alt="Eat More Eat Less Guide" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <span class="tip-badge">Family · Food Choices</span>
+                            <h3><span class="en-content">Eat More of These, Less of Those</span><span class="bn-content">কোন খাবার বেশি, কোনটা কম</span></h3>
+                            <p><span class="en-content">A clear visual guide to making smarter food choices for the whole family — what to eat more of and what to avoid.</span><span class="bn-content">পুরো পরিবারের জন্য স্বাস্থ্যকর খাদ্যাভ্যাস গড়ে তোলার সহজ গাইড।</span></p>
+                            <span class="read-more-btn"><span class="en-content">Read Article →</span><span class="bn-content">পড়ুন →</span></span>
+                        </div>
+                    </a>
                 </div>
-                <div class="card blog-card" data-cat="impact">
-                    <div class="card-img-wrap"><img src="img/blog/8.jpg" alt="Blog"></div>
-                    <div class="card-body">
-                        <span class="eyebrow"><span class="en-content">Story</span><span class="bn-content">গল্প</span></span>
-                        <h3><span class="en-content">Impact Story: One Family's Journey</span><span class="bn-content">প্রভাব গল্প: এক পরিবারের যাত্রা</span></h3>
-                        <p><span class="en-content">How one family's nutrition transformed in just six months through our program.</span><span class="bn-content">আমাদের কার্যক্রমের মাধ্যমে মাত্র ছয় মাসে এক পরিবারের পুষ্টি কীভাবে রূপান্তরিত হয়েছে।</span></p>
-                        <a href="#" style="font-weight: 800; color: var(--secondary); text-decoration: none;">
-                            <span class="en-content">Read Article &rarr;</span>
-                            <span class="bn-content">পড়ুন &rarr;</span>
-                        </a>
-                    </div>
+
+                <!-- Card 8 -->
+                <div class="card blog-card" data-cat="family">
+                    <a href="articles/mental-health-matters.html" class="blog-card-link">
+                        <div class="card-img-wrap">
+                            <img src="img/tips/8.png" alt="Mental Health Matters" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <span class="tip-badge">Mental Health</span>
+                            <h3><span class="en-content">Mental Health Matters</span><span class="bn-content">মানসিক স্বাস্থ্য গুরুত্বপূর্ণ</span></h3>
+                            <p><span class="en-content">How food, sleep, exercise, and daily habits powerfully impact your emotional and psychological well-being.</span><span class="bn-content">খাদ্য, ঘুম, ব্যায়াম ও দৈনন্দিন অভ্যাস কীভাবে মানসিক সুস্থতাকে প্রভাবিত করে।</span></p>
+                            <span class="read-more-btn"><span class="en-content">Read Article →</span><span class="bn-content">পড়ুন →</span></span>
+                        </div>
+                    </a>
                 </div>
-                <div class="card blog-card" data-cat="nutrition">
-                    <div class="card-img-wrap"><img src="img/blog/9.jpg" alt="Blog"></div>
-                    <div class="card-body">
-                        <span class="eyebrow"><span class="en-content">Celebration</span><span class="bn-content">উৎসব</span></span>
-                        <h3><span class="en-content">Community Celebration: Our Milestones</span><span class="bn-content">কমিউনিটি উৎসব: আমাদের মাইলফলক</span></h3>
-                        <p><span class="en-content">Celebrating the progress made with our partners and the community we serve.</span><span class="bn-content">আমাদের অংশীদার এবং যে সম্প্রদায়কে আমরা সেবা করি তাদের সাথে অগ্রগতি উদযাপন করা।</span></p>
-                        <a href="#" style="font-weight: 800; color: var(--secondary); text-decoration: none;">
-                            <span class="en-content">Read Article &rarr;</span>
-                            <span class="bn-content">পড়ুন &rarr;</span>
-                        </a>
-                    </div>
+
+                <!-- Card 9 -->
+                <div class="card blog-card" data-cat="girls">
+                    <a href="articles/nutrition-for-girls.html#hair" class="blog-card-link">
+                        <div class="card-img-wrap">
+                            <img src="img/tips/9.png" alt="Your Hair Is What You Eat" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <span class="tip-badge">Hair & Skin · Nutrition</span>
+                            <h3><span class="en-content">Your Hair Is What You Eat</span><span class="bn-content">তোমার চুলই বলে তুমি কী খাও</span></h3>
+                            <p><span class="en-content">Protein, iron, and omega-3 fatty acids are the key nutrients for strong, shiny, healthy hair — from within.</span><span class="bn-content">প্রোটিন, আয়রন ও ওমেগা-৩ — সুন্দর, শক্তিশালী চুলের জন্য প্রয়োজনীয় পুষ্টি।</span></p>
+                            <span class="read-more-btn"><span class="en-content">Read Article →</span><span class="bn-content">পড়ুন →</span></span>
+                        </div>
+                    </a>
                 </div>
+
+                <!-- Card 10 -->
+                <div class="card blog-card" data-cat="leadership">
+                    <a href="articles/leadership-in-nutrition.html" class="blog-card-link">
+                        <div class="card-img-wrap">
+                            <img src="img/tips/10.png" alt="Leadership in Nutrition" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <span class="tip-badge">Leadership · Community</span>
+                            <h3><span class="en-content">Leadership in Nutrition</span><span class="bn-content">পুষ্টিতে নেতৃত্ব</span></h3>
+                            <p><span class="en-content">How youth leaders can champion better nutrition, inspire their communities, and create lasting change in Bagerhat.</span><span class="bn-content">তরুণ নেতারা কীভাবে পুষ্টির পক্ষে কথা বলে সম্প্রদায়ে ইতিবাচক পরিবর্তন আনতে পারে।</span></p>
+                            <span class="read-more-btn"><span class="en-content">Read Article →</span><span class="bn-content">পড়ুন →</span></span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Card 11 -->
+                <div class="card blog-card" data-cat="leadership">
+                    <a href="articles/leadership-in-nutrition.html#principles" class="blog-card-link">
+                        <div class="card-img-wrap">
+                            <img src="img/tips/11.png" alt="Principles of Nutrition Leadership" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <span class="tip-badge">Leadership · Principles</span>
+                            <h3><span class="en-content">Principles of Nutrition Leadership</span><span class="bn-content">পুষ্টি নেতৃত্বের নীতিমালা</span></h3>
+                            <p><span class="en-content">Equity, sustainability, collaboration, and evidence — the core leadership principles behind NNF's mission.</span><span class="bn-content">সমতা, টেকসইতা, সহযোগিতা ও প্রমাণ — NNF-এর পুষ্টি নেতৃত্বের মূল নীতি।</span></p>
+                            <span class="read-more-btn"><span class="en-content">Read Article →</span><span class="bn-content">পড়ুন →</span></span>
+                        </div>
+                    </a>
+                </div>
+
             </div>
         </div>
     </section>
@@ -182,30 +250,27 @@
     <!-- Newsletter -->
     <section class="section">
         <div class="container">
-            <div class="footer-newsletter reveal" style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <h2 style="color: white; margin-bottom: 20px;">Get Monthly <span class="serif-italic">Updates</span>.
-                </h2>
-                <p style="color: rgba(255,255,255,0.8); margin-bottom: 30px;">
-                    <span class="en-content">Subscribe to our journal for impact stories and health tips delivered to your inbox.</span>
-                    <span class="bn-content">ইমপ্যাক্ট স্টোরি ও স্বাস্থ্য টিপস পেতে আমাদের জার্নালে সাবস্ক্রাইব করুন।</span>
+            <div class="footer-newsletter reveal" style="text-align:center;max-width:800px;margin:0 auto;">
+                <h2 style="color:white;margin-bottom:20px;">Get Monthly <span class="serif-italic">Updates</span>.</h2>
+                <p style="color:rgba(255,255,255,0.8);margin-bottom:30px;">
+                    <span class="en-content">Subscribe to receive nutrition guides, impact stories, and health tips in your inbox.</span>
+                    <span class="bn-content">পুষ্টি গাইড, প্রভাব গল্প ও স্বাস্থ্য টিপস পেতে সাবস্ক্রাইব করুন।</span>
                 </p>
-                <form onsubmit="event.preventDefault(); alert('Subscribed!')"
-                    style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-                    <input type="email" placeholder="Your email address"
-                        style="padding: 15px 30px; border-radius: 50px; border: none; min-width: 300px; outline: none;">
+                <form onsubmit="event.preventDefault();alert('Thank you for subscribing!')" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
+                    <input type="email" placeholder="Your email address" style="padding:15px 30px;border-radius:50px;border:none;min-width:300px;outline:none;" required>
                     <button class="btn btn-gold"><span class="en-content">Join the Movement</span><span class="bn-content">আন্দোলনে যুক্ত হোন</span></button>
                 </form>
             </div>
         </div>
     </section>
 
-        <!-- Footer -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-main">
                 <div>
                     <span class="footer-logo">NNF Foundation</span>
-                    <p style="opacity: 0.7; font-size: 0.95rem; margin-top: 15px;"><span class="en-content">Nourishing lives through youth-led innovation. Together for a healthier Bagerhat.</span><span class="bn-content">তরুণদের নেতৃত্বে উদ্ভাবনের মাধ্যমে জীবনকে পুষ্ট করা। সুস্থ বাগেরহাটের জন্য একসাথে।</span></p>
+                    <p style="opacity:0.7;font-size:0.95rem;margin-top:15px;"><span class="en-content">Nourishing lives through youth-led innovation. Together for a healthier Bagerhat.</span><span class="bn-content">তরুণদের নেতৃত্বে উদ্ভাবনের মাধ্যমে জীবনকে পুষ্ট করা।</span></p>
                 </div>
                 <div>
                     <h4><span class="en-content">Explore</span><span class="bn-content">অন্বেষণ করুন</span></h4>
@@ -223,21 +288,21 @@
                         <li>📍 Bagerhat, Bangladesh</li>
                         <li>📞 +880 1927-704833</li>
                         <li>📧 pnf.foundation@gmail.com</li>
-                        <li>🌐 <a href="https://nnf-foundation.vercel.app" style="color: inherit; text-decoration: none;"><span class="en-content">Website</span><span class="bn-content">ওয়েবসাইট</span></a></li>
+                        <li>🌐 <a href="https://nnf-foundation.vercel.app" style="color:inherit;text-decoration:none;">nnf-foundation.vercel.app</a></li>
                     </ul>
                 </div>
                 <div>
-                    <form class="footer-newsletter" onsubmit="event.preventDefault(); alert('Subscribed!')">
+                    <form class="footer-newsletter" onsubmit="event.preventDefault();alert('Subscribed!')">
                         <h4><span class="en-content">Stay Updated</span><span class="bn-content">যুক্ত থাকুন</span></h4>
-                        <div style="display: flex; gap: 10px; margin-top: 20px;">
-                            <input type="email" placeholder="Your email" style="flex: 1; padding: 12px 20px; border-radius: 50px; border: none; outline: none;" required>
-                            <button type="submit" class="btn btn-gold" style="padding: 10px 20px;"><span class="en-content">Join</span><span class="bn-content">যুক্ত হোন</span></button>
+                        <div style="display:flex;gap:10px;margin-top:20px;">
+                            <input type="email" placeholder="Your email" style="flex:1;padding:12px 20px;border-radius:50px;border:none;outline:none;" required>
+                            <button type="submit" class="btn btn-gold" style="padding:10px 20px;"><span class="en-content">Join</span><span class="bn-content">যুক্ত হোন</span></button>
                         </div>
                     </form>
                 </div>
             </div>
-            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px; text-align: center; font-size: 0.85rem; opacity: 0.5; margin-top: 40px;">
-                &copy; 2025 NOVA Nourish Foundation. All Rights Reserved. Supported by GAIN & SUN Youth Network.
+            <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:40px;text-align:center;font-size:0.85rem;opacity:0.5;margin-top:40px;">
+                &copy; 2025 NOVA Nourish Foundation. All Rights Reserved. Supported by GAIN &amp; SUN Youth Network.
             </div>
         </div>
     </footer>
@@ -248,11 +313,13 @@
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             document.querySelectorAll('.blog-card').forEach(card => {
-                if (cat === 'all' || card.getAttribute('data-cat') === cat) card.style.display = 'flex';
-                else card.style.display = 'none';
+                if (cat === 'all' || card.getAttribute('data-cat') === cat) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
             });
         }
     </script>
 </body>
-
 </html>
